@@ -4,6 +4,7 @@ target/
 !**/src/test/**/target/
 /.idea/checkstyle-idea.xml
 /.idea/eclipseCodeFormatter.xml
+/.idea/uiDesigner.xml
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
