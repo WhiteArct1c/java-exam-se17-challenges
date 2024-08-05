@@ -63,6 +63,14 @@ public class CustomerRepository {
     }
 
     /**
+     * Get all users between @param1 and @param2 years old from the list of users using stream API (filter)
+     * @return List<Customer>
+     */
+    public List<Customer> getUsersBetweenAges(int age1, int age2) {
+        return null;
+    }
+
+    /**
      * Group user by the 4 last digits of the phone number from the list of users using stream API (groupingBy)
      * @return Map<String, List<Customer>>
      */
