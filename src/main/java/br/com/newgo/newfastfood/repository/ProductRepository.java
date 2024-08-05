@@ -62,6 +62,14 @@ public class ProductRepository {
     }
 
     /**
+     * Get product with the price above the average from the list of products using stream API (filter)
+     * @return List<Product>
+     */
+    public List<Product> getProductsAboveAveragePrice() {
+        return null;
+    }
+
+    /**
      * Summarize all products prices from the list of products using stream API (summaryStatistics)
      * and return the average price using the method from DoubleSummaryStatistics
      *
