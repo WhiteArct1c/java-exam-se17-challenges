@@ -1,6 +1,6 @@
 package br.com.newgo.newfastfood.repository;
 
-import br.com.newgo.newfastfood.model.IProduct;
+import br.com.newgo.newfastfood.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,13 +10,13 @@ import java.util.Map;
 public class ProductRepository {
 
     //Faz sentido essa variável ser volatile ou não? Por quê? Considere que a aplicação é multithread e como isso impacta o restante do código.
-    private volatile List<IProduct> products = new ArrayList<>();
+    private volatile List<Product> products = new ArrayList<>();
 
     /**
      * Add product to the list of products
      * @param product
      */
-    public void addProduct(IProduct product) {
+    public void addProduct(Product product) {
         products.add(product);
     }
 
@@ -24,16 +24,16 @@ public class ProductRepository {
      * Get all products from the list of products
      * @return List<IProduct>
      */
-    public List<IProduct> getProducts() {
+    public List<Product> getProducts() {
         return products;
     }
 
     /**
      * Get product by id from the list of products using stream API and Optional
      * @param id
-     * @return IProduct
+     * @return Product
      */
-    public IProduct getProductById(Long id) {
+    public Product getProductById(Long id) {
         return null;
     }
 
@@ -41,7 +41,7 @@ public class ProductRepository {
      * Get the most expensive product from the list of products using stream API (max)
      * @return IProduct
      */
-    public IProduct getMostExpensiveProduct() {
+    public Product getMostExpensiveProduct() {
         return null;
     }
 
@@ -49,7 +49,7 @@ public class ProductRepository {
      * Get the cheapest product from the list of products using stream API (min)
      * @return IProduct
      */
-    public IProduct getCheapestProduct() {
+    public Product getCheapestProduct() {
         return null;
     }
 
@@ -73,17 +73,17 @@ public class ProductRepository {
 
     /**
      * Group products by price from the list of products using stream API (groupingBy)
-     * @return Map<Double, List<IProduct>>
+     * @return Map<Double, List<Product>>
      */
-    public Map<Double, List<IProduct>> groupProductsByPrice() {
+    public Map<Double, List<Product>> groupProductsByPrice() {
         return null;
     }
 
     /**
      * Partition product list by odd ids from the list of products using stream API (partitioningBy)
-     * @return Map<Boolean, List<IProduct>>
+     * @return Map<Boolean, List<Product>>
      */
-    public Map<Boolean, List<IProduct>> partitionProductsByOddIds() {
+    public Map<Boolean, List<Product>> partitionProductsByOddIds() {
         return null;
     }
 

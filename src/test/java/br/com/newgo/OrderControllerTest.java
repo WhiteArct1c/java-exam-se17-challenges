@@ -3,7 +3,7 @@ package br.com.newgo;
 import static org.junit.jupiter.api.Assertions.*;
 
 import br.com.newgo.newfastfood.controller.OrderController;
-import br.com.newgo.newfastfood.model.impl.products.Hamburguer;
+import br.com.newgo.newfastfood.model.Product;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,16 +16,16 @@ import java.util.List;
  * Classe de testes para OrderController.
  */
 public class OrderControllerTest {
-    private List<Hamburguer> menu;
+    private List<Product> menu;
     private OrderController orderController;
 
     @BeforeEach
     public void setUp() {
         menu = Arrays.asList(
-                new Hamburguer(1L, "X-Bacon", 5.99),
-                new Hamburguer(2L, "X-Salada",2.99),
-                new Hamburguer(3L, "X-Tudo", 1.99),
-                new Hamburguer(4L, "X-Egg", 9.0)
+                new Product(1L, "X-Bacon", 5.99),
+                new Product(2L, "X-Salada",2.99),
+                new Product(3L, "X-Tudo", 1.99),
+                new Product(4L, "X-Egg", 9.0)
         );
         orderController = new OrderController(menu);
     }

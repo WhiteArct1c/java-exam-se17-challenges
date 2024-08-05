@@ -1,6 +1,6 @@
 package br.com.newgo.newfastfood.view;
 
-import br.com.newgo.newfastfood.model.impl.products.Hamburguer;
+import br.com.newgo.newfastfood.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,14 +10,14 @@ import java.util.List;
  */
 public class MenuView {
 
-    List<Hamburguer> itensMenu = new ArrayList<>();
+    List<Product> itensMenu = new ArrayList<>();
 
     /**
      * Construtor para criar uma nova instância de MenuView.
      *
      * @param itensMenu Lista de itens do menu.
      */
-    public MenuView(List<Hamburguer> itensMenu) {
+    public MenuView(List<Product> itensMenu) {
         this.itensMenu = itensMenu;
     }
 
@@ -26,9 +26,9 @@ public class MenuView {
      *
      * @param menu Lista de itens do menu.
      */
-    public void displayMenu(List<Hamburguer> menu) {
+    public void displayMenu(List<Product> menu) {
         System.out.println("Menu:");
-        for (Hamburguer item : this.itensMenu) {
+        for (Product item : this.itensMenu) {
             System.out.println( item.getId() + " - "+ item.getName() + ": $" + item.getPrice());
         }
     }

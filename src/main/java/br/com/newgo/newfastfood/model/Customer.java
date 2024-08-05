@@ -1,8 +1,6 @@
-package br.com.newgo.newfastfood.model.impl.users;
+package br.com.newgo.newfastfood.model;
 
-import br.com.newgo.newfastfood.model.IUser;
-
-public class Customer implements IUser{
+public class Customer{
     private Long id;
     private String name;
     private String email;
@@ -15,42 +13,34 @@ public class Customer implements IUser{
         this.phone = phone;
     }
 
-    @Override
     public Long getId() {
         return id;
     }
 
-    @Override
     public String getName() {
         return name;
     }
 
-    @Override
     public String getEmail() {
         return email;
     }
 
-    @Override
     public String getPhone() {
         return phone;
     }
 
-    @Override
     public void setId(Long id) {
         this.id = id;
     }
 
-    @Override
     public void setName(String name) {
         this.name = name;
     }
 
-    @Override
     public void setEmail(String email) {
         this.email = email;
     }
 
-    @Override
     public void setPhone(String phone) {
         this.phone = phone;
     }

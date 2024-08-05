@@ -1,31 +1,29 @@
 package br.com.newgo.newfastfood.view;
 
 import br.com.newgo.newfastfood.controller.OrderController;
-import br.com.newgo.newfastfood.model.impl.products.Hamburguer;
-import br.com.newgo.newfastfood.model.impl.users.Customer;
-import br.com.newgo.newfastfood.repository.UserRepository;
+import br.com.newgo.newfastfood.model.Product;
 
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        Hamburguer hamburguer1 = new Hamburguer(1L, "X-Bacon", 10.0);
-        Hamburguer hamburguer2 = new Hamburguer(2L, "X-Salada", 8.0);
-        Hamburguer hamburguer3 = new Hamburguer(3L, "X-Tudo", 15.0);
-        Hamburguer hamburguer4 = new Hamburguer(4L, "X-Egg", 9.0);
-        Hamburguer hamburguer5 = new Hamburguer(5L, "X-Frango", 10.0);
-        Hamburguer hamburguer6 = new Hamburguer(6L, "X-Vegano", 12.0);
-        Hamburguer hamburguer7 = new Hamburguer(7L, "X-Burger", 7.0);
+        Product product1 = new Product(1L, "X-Bacon", 10.0);
+        Product product2 = new Product(2L, "X-Salada", 8.0);
+        Product product3 = new Product(3L, "X-Tudo", 15.0);
+        Product product4 = new Product(4L, "X-Egg", 9.0);
+        Product product5 = new Product(5L, "X-Frango", 10.0);
+        Product product6 = new Product(6L, "X-Vegano", 12.0);
+        Product product7 = new Product(7L, "X-Burger", 7.0);
 
-        List<Hamburguer> hamburguers = List.of(hamburguer1, hamburguer2, hamburguer3, hamburguer4, hamburguer5, hamburguer6, hamburguer7);
+        List<Product> products = List.of(product1, product2, product3, product4, product5, product6, product7);
 
 //        MenuView menuView = new MenuView();
 //        menuView.displayMenu(hamburguers);
 
 
 
-        OrderController orderController = new OrderController(hamburguers);
+        OrderController orderController = new OrderController(products);
 
         orderController.startOrder();
 

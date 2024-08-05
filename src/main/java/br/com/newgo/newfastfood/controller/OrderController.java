@@ -1,7 +1,7 @@
 package br.com.newgo.newfastfood.controller;
 
-import br.com.newgo.newfastfood.model.impl.order.Order;
-import br.com.newgo.newfastfood.model.impl.products.Hamburguer;
+import br.com.newgo.newfastfood.model.Order;
+import br.com.newgo.newfastfood.model.Product;
 import br.com.newgo.newfastfood.view.MenuView;
 import br.com.newgo.newfastfood.view.OrderView;
 
@@ -15,14 +15,14 @@ public class OrderController {
     private Order order;
     private MenuView menuView;
     private OrderView orderView;
-    private List<Hamburguer> menu;
+    private List<Product> menu;
 
     /**
      * Construtor para criar um controlador de pedido.
      *
      * @param menu Lista de itens do menu.
      */
-    public OrderController(List<Hamburguer> menu) {
+    public OrderController(List<Product> menu) {
         this.order = new Order();
         this.menuView = new MenuView(menu);
         this.orderView = new OrderView();
@@ -42,7 +42,7 @@ public class OrderController {
      * @param idItem Nome do item a ser adicionado.
      */
     public void addItemToOrder(Long idItem) {
-        for (Hamburguer item : menu) {
+        for (Product item : menu) {
             if (item.getId() == idItem) {
                 order.addItem(item);
                 return;
