@@ -3,10 +3,10 @@ package br.com.newgo.newfastfood.repository;
 import br.com.newgo.newfastfood.model.IProduct;
 
 import java.util.ArrayList;
-import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 
+//TODO: Um dos grupos irá implementar a classe ProductRepository
 public class ProductRepository {
 
     //Faz sentido essa variável ser volatile ou não? Por quê? Considere que a aplicação é multithread e como isso impacta o restante do código.
@@ -54,7 +54,7 @@ public class ProductRepository {
     }
 
     /**
-     * Get the sum of all products prices from the list of products using stream API (reduce)
+     * Get the sum of all products prices from the list of products using stream API (sum)
      * @return double
      */
     public double getSumProductsPrices() {
@@ -63,25 +63,27 @@ public class ProductRepository {
 
     /**
      * Summarize all products prices from the list of products using stream API (summaryStatistics)
-     * @return DoubleSummaryStatistics
+     * and return the average price using the method from DoubleSummaryStatistics
+     *
+     * @return double
      */
-    public DoubleSummaryStatistics summarizeProductsPrices() {
+    public double getAverageProductsPrices() {
+        return 0;
+    }
+
+    /**
+     * Group products by price from the list of products using stream API (groupingBy)
+     * @return Map<Double, List<IProduct>>
+     */
+    public Map<Double, List<IProduct>> groupProductsByPrice() {
         return null;
     }
 
     /**
-     * Group products by price range from the list of products using stream API (groupingBy)
-     * @return Map<String, List<IProduct>>
-     */
-    public Map<String, List<IProduct>> groupProductsByPriceRange() {
-        return null;
-    }
-
-    /**
-     * Partition product list by odd and even id from the list of products using stream API (partitioningBy)
+     * Partition product list by odd ids from the list of products using stream API (partitioningBy)
      * @return Map<Boolean, List<IProduct>>
      */
-    public Map<Boolean, List<IProduct>> partitionProductsByOddAndEvenId() {
+    public Map<Boolean, List<IProduct>> partitionProductsByOddIds() {
         return null;
     }
 

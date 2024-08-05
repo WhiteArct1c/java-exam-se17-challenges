@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+//TODO: Um dos grupos irá implementar a classe UserRepository
 public class UserRepository {
 
     //Faz sentido essa variável ser transient ou não? Por quê?
@@ -65,7 +66,7 @@ public class UserRepository {
      * Group user by the 4 last digits of the phone number from the list of users using stream API (groupingBy)
      * @return Map<String, List<IUser>>
      */
-    public Map<String, List<IUser>> groupUsersByPhone() {
+    public Map<String, List<IUser>> groupUsersByLastFourPhoneDigits() {
         return null;
     }
 
@@ -75,7 +76,7 @@ public class UserRepository {
      *
      * @return Map<Integer, Long>
      */
-    public Map<Integer, Long> groupUsersByNameLength() {
+    public Map<Integer, Long> groupUsersByNameLengthAndSameLength() {
         return null;
     }
 
