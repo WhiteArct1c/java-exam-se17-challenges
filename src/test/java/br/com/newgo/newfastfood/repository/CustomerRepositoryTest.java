@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class CustomerRepositoryTest {
 
@@ -33,6 +34,7 @@ public class CustomerRepositoryTest {
 
     @Test
     public void testGetUserById(){
+        assertNotNull(customerRepository.getUserById(1L));
         assertEquals("John Doe", customerRepository.getUserById(1L).getName());
     }
 
@@ -43,21 +45,25 @@ public class CustomerRepositoryTest {
 
     @Test
     public void testGetFirstUser(){
+        assertNotNull(customerRepository.getFirstUser());
         assertEquals("John Doe", customerRepository.getFirstUser().getName());
     }
 
     @Test
     public void testGetAllUsersSortedByName(){
+        assertNotNull(customerRepository.getUsersSortedByName());
         assertEquals("Alice", customerRepository.getUsersSortedByName().get(0).getName());
     }
 
     @Test
     public void testGroupUsersByLastFourPhoneDigits(){
+        assertNotNull(customerRepository.groupUsersByLastFourPhoneDigits());
         assertEquals(2, customerRepository.groupUsersByLastFourPhoneDigits().size());
     }
 
     @Test
     public void testGroupUsersByNameLengthAndSameLength(){
+        assertNotNull(customerRepository.groupUsersByNameLengthAndSameLength());
         assertEquals(4, customerRepository.groupUsersByNameLengthAndSameLength().size());
     }
 }

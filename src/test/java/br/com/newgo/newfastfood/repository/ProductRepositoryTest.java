@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class ProductRepositoryTest {
 
@@ -34,16 +35,19 @@ public class ProductRepositoryTest {
 
     @Test
     public void testGetProductById(){
+        assertNotNull(productRepository.getProductById(1L));
         assertEquals("X-Bacon", productRepository.getProductById(1L).getName());
     }
 
     @Test
     public void testGetMostExpensiveProduct(){
+        assertNotNull(productRepository.getMostExpensiveProduct());
         assertEquals("X-Tudo", productRepository.getMostExpensiveProduct().getName());
     }
 
     @Test
     public void testGetCheapestProduct(){
+        assertNotNull(productRepository.getCheapestProduct());
         assertEquals("X-Burger", productRepository.getCheapestProduct().getName());
     }
 
@@ -59,11 +63,13 @@ public class ProductRepositoryTest {
 
     @Test
     public void testGroupProductsByPrice(){
+        assertNotNull(productRepository.groupProductsByPrice());
         assertEquals(5, productRepository.groupProductsByPrice().size());
     }
 
     @Test
     public void testPartitionProductsByOddIds(){
+        assertNotNull(productRepository.partitionProductsByOddIds());
         assertEquals(4, productRepository.partitionProductsByOddIds().get(true).size());
     }
 }
