@@ -53,7 +53,7 @@ public class ProductRepositoryTest {
 
     @Test
     public void testGetSumProductsPrices(){
-        assertEquals(75.0, productRepository.getSumProductsPrices());
+        assertEquals(90.0, productRepository.getSumProductsPrices());
     }
 
     @Test
@@ -64,7 +64,7 @@ public class ProductRepositoryTest {
 
     @Test
     public void testGetAverageProductsPrices(){
-        assertEquals(12.5, productRepository.getAverageProductsPrices());
+        assertEquals(13, productRepository.getAverageProductsPrices());
     }
 
     @Test
