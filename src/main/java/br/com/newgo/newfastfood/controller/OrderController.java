@@ -39,7 +39,7 @@ public class OrderController {
     /**
      * Adiciona um item ao pedido com base no nome do item.
      *
-     * @param itemName Nome do item a ser adicionado.
+     * @param idItem Nome do item a ser adicionado.
      */
     public void addItemToOrder(Long idItem) {
         for (Hamburguer item : menu) {
