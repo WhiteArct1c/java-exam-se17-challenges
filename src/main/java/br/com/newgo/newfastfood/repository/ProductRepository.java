@@ -70,7 +70,7 @@ public class ProductRepository {
 
     /**
      * Summarize all products prices from the list of products using stream API (summaryStatistics)
-     * and return the average price using the method from DoubleSummaryStatistics
+     * and return the average price using the method from DoubleSummaryStatistics, finally, round the result.
      *
      * @return double
      */
