@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-//TODO: Um dos grupos irá implementar a classe CustomerRepository
 public class CustomerRepository {
 
     //Faz sentido essa variável ser transient ou não? Por quê?

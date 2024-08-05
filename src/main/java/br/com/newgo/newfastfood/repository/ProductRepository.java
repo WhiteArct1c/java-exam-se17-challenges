@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-//TODO: Um dos grupos irá implementar a classe ProductRepository
 public class ProductRepository {
 
     //Faz sentido essa variável ser volatile ou não? Por quê? Considere que a aplicação é multithread e como isso impacta o restante do código.
