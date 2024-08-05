@@ -4,12 +4,14 @@ target/
 !**/src/test/**/target/
 /.idea/checkstyle-idea.xml
 /.idea/eclipseCodeFormatter.xml
+/.idea/uiDesigner.xml
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/misc.xml
 *.iws
 *.iml
 *.ipr
