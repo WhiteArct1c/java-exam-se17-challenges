@@ -22,7 +22,7 @@ public class CustomerRepository {
 
     /**
      * Get all users from the list of users
-     * @return List<IUser>
+     * @return List<Customer>
      */
     public List<Customer> getCustomers() {
         return customers;

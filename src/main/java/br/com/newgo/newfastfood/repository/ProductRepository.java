@@ -22,7 +22,7 @@ public class ProductRepository {
 
     /**
      * Get all products from the list of products
-     * @return List<IProduct>
+     * @return List<Product>
      */
     public List<Product> getProducts() {
         return products;
@@ -39,7 +39,7 @@ public class ProductRepository {
 
     /**
      * Get the most expensive product from the list of products using stream API (max)
-     * @return IProduct
+     * @return Product
      */
     public Product getMostExpensiveProduct() {
         return null;
@@ -47,7 +47,7 @@ public class ProductRepository {
 
     /**
      * Get the cheapest product from the list of products using stream API (min)
-     * @return IProduct
+     * @return Product
      */
     public Product getCheapestProduct() {
         return null;
