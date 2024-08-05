@@ -32,22 +32,22 @@ public class OrderControllerTest {
 
     @Test
     public void testAddItemToOrder() {
-        orderController.addItemToOrder(1l);
+        orderController.addItemToOrder(1L);
         assertEquals(1, orderController.getOrder().getItems().size());
         assertEquals("X-Bacon", orderController.getOrder().getItems().get(0).getName());
     }
 
     @Test
     public void testAddItemToOrder_ItemNotFound() {
-        orderController.addItemToOrder(5l);
+        orderController.addItemToOrder(5L);
         assertEquals(0, orderController.getOrder().getItems().size());
     }
 
     @Test
     public void testCalculateTotal() {
         // TODO: Deve falhar enquanto o método não for implementado
-        orderController.addItemToOrder(1l);
-        orderController.addItemToOrder(2l);
+        orderController.addItemToOrder(1L);
+        orderController.addItemToOrder(2L);
         assertEquals(8.98, orderController.getOrder().calculateTotal(), 0.01);
     }
 
@@ -76,7 +76,7 @@ public class OrderControllerTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
-        orderController.addItemToOrder(4l);
+        orderController.addItemToOrder(4L);
         orderController.displayOrder();
 
         String expectedOutput = "Seu pedido:" + System.lineSeparator() +
