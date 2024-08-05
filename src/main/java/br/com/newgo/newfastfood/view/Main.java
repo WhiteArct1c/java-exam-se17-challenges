@@ -8,10 +8,7 @@ import br.com.newgo.newfastfood.repository.UserRepository;
 import java.util.List;
 
 public class Main {
-//    public static void main(String[] args) {
-//        UserRepository userRepository = new UserRepository();
-//        userRepository.addUser(new Customer(1L, "John Doe", "john@gmail.com", "123456789"));
-//    }
+
     public static void main(String[] args) {
         Hamburguer hamburguer1 = new Hamburguer(1L, "X-Bacon", 10.0);
         Hamburguer hamburguer2 = new Hamburguer(2L, "X-Salada", 8.0);
