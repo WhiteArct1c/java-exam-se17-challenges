@@ -64,6 +64,8 @@ public class CustomerRepository {
 
     /**
      * Get all users between @param1 and @param2 years old from the list of users using stream API (filter)
+     * @param age1
+     * @param age2
      * @return List<Customer>
      */
     public List<Customer> getUsersBetweenAges(int age1, int age2) {
