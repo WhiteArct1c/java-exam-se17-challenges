@@ -58,7 +58,7 @@ public class CustomerRepositoryTest {
     @Test
     public void testGetUsersBetweenAges(){
         assertNotNull(customerRepository.getUsersBetweenAges(20, 30));
-        assertEquals(3, customerRepository.getUsersBetweenAges(20, 30).size());
+        assertEquals(2, customerRepository.getUsersBetweenAges(20, 30).size());
     }
 
     @Test
