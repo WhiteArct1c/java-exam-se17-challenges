@@ -57,6 +57,12 @@ public class ProductRepositoryTest {
     }
 
     @Test
+    public void testGetProductsAboveAveragePrice(){
+        assertNotNull(productRepository.getProductsAboveAveragePrice());
+        assertEquals(3, productRepository.getProductsAboveAveragePrice().size());
+    }
+
+    @Test
     public void testGetAverageProductsPrices(){
         assertEquals(12.5, productRepository.getAverageProductsPrices());
     }
