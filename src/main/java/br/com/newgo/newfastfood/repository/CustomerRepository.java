@@ -1,39 +1,38 @@
 package br.com.newgo.newfastfood.repository;
 
-import br.com.newgo.newfastfood.model.IUser;
+import br.com.newgo.newfastfood.model.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-//TODO: Um dos grupos irá implementar a classe UserRepository
-public class UserRepository {
+public class CustomerRepository {
 
     //Faz sentido essa variável ser transient ou não? Por quê?
-    private transient List<IUser> users = new ArrayList<>();
+    private transient List<Customer> customers = new ArrayList<>();
 
     /**
      * Add user to the list of users
-     * @param user
+     * @param customer
      */
-    public void addUser(IUser user) {
-        users.add(user);
+    public void addUser(Customer customer) {
+        customers.add(customer);
     }
 
     /**
      * Get all users from the list of users
-     * @return List<IUser>
+     * @return List<Customer>
      */
-    public List<IUser> getUsers() {
-        return users;
+    public List<Customer> getCustomers() {
+        return customers;
     }
 
     /**
      * Get user by id from the list of users using stream API and Optional
      * @param id
-     * @return IUser
+     * @return Customer
      */
-    public IUser getUserById(Long id) {
+    public Customer getUserById(Long id) {
         return null;
     }
 
@@ -48,25 +47,35 @@ public class UserRepository {
     /**
      * Get the first user from the list of users using stream API (findFirst) and Optional
      * Case the list is empty, throw a new RuntimeException with the message "No users found" using the same stream pipeline
-     * @return IUser
+     * @return Customer
      */
-    public IUser getFirstUser() {
+    public Customer getFirstUser() {
         return null;
     }
 
     /**
      * Get all users sorted by name from the list of users using stream API (sorted)
-     * @return List<IUser>
+     * @return List<Customer>
      */
-    public List<IUser> getUsersSortedByName() {
+    public List<Customer> getUsersSortedByName() {
+        return null;
+    }
+
+    /**
+     * Get all users between @param1 and @param2 years old from the list of users using stream API (filter)
+     * @param age1
+     * @param age2
+     * @return List<Customer>
+     */
+    public List<Customer> getUsersBetweenAges(int age1, int age2) {
         return null;
     }
 
     /**
      * Group user by the 4 last digits of the phone number from the list of users using stream API (groupingBy)
-     * @return Map<String, List<IUser>>
+     * @return Map<String, List<Customer>>
      */
-    public Map<String, List<IUser>> groupUsersByLastFourPhoneDigits() {
+    public Map<String, List<Customer>> groupUsersByLastFourPhoneDigits() {
         return null;
     }
 

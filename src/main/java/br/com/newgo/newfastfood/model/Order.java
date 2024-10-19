@@ -1,6 +1,6 @@
-package br.com.newgo.newfastfood.model.impl.order;
+package br.com.newgo.newfastfood.model;
 
-import br.com.newgo.newfastfood.model.impl.products.Hamburguer;
+import br.com.newgo.newfastfood.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ public class Order {
     //criar documentação JavaDoc
 
 
-    private List<Hamburguer> items;
+    private List<Product> items;
 
     /**
      * Construtor para criar um pedido vazio.
@@ -26,7 +26,7 @@ public class Order {
      *
      * @param item Item a ser adicionado.
      */
-    public void addItem(Hamburguer item) {
+    public void addItem(Product item) {
         items.add(item);
     }
 
@@ -45,7 +45,7 @@ public class Order {
      *
      * @return Lista de itens do pedido.
      */
-    public List<Hamburguer> getItems() {
+    public List<Product> getItems() {
         return items;
     }
 }
